@@ -13,7 +13,7 @@ jobs:
       - name: Generating project version
         uses: EduardSergeev/project-version-action@v6
         with:
-            version-file: Omnicasa.Analyzers/Omnicasa.Analyzers.csproj
+            version-file: Omnicasa.Analyzer/Omnicasa.Analyzers.csproj
             version-stub: '65534.65534.65534.65534'
 
       - name: Set version for project
