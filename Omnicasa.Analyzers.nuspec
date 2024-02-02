@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Omnicasa.Analyzers</id>
-        <version>1.0.2</version>
+        <version>1.0.6</version>
         <authors>HoangQuach</authors>
         <owners>HoangQuach</owners>
         <license type="expression">MIT</license>
@@ -16,8 +16,8 @@
     </metadata>
 
     <files>
-		<file src="stylecop.json" />
-		<file src="Omnicasa.Apps.ruleset" />
-		<file src="Omnicasa.Analyzer.props" target="build" />
+		<file src="Omnicasa.Analyzer\stylecop.json" />
+		<file src="Omnicasa.Analyzer\Omnicasa.Apps.ruleset" />
+		<file src="Omnicasa.Analyzer\Omnicasa.Analyzers.props" target="build" />
     </files>
 </package>

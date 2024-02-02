@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="Omnicasa.Analyzer" Version="1.0.1">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-	  </PackageReference>
+    <PackageReference Include="Omnicasa.Analyzers" Version="1.0.5" />
   </ItemGroup>
-
 </Project>

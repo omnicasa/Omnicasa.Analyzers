@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omnicasa.Analyzer.Test", "O
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D15BCEFE-A80A-404E-916E-5C1C7995144A}"
 	ProjectSection(SolutionItems) = preProject
-		Omnicasa.Analyzer.nuspec = Omnicasa.Analyzer.nuspec
+		Omnicasa.Analyzers.nuspec = Omnicasa.Analyzers.nuspec
 	EndProjectSection
 EndProject
 Global

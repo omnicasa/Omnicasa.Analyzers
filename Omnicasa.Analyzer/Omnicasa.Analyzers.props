@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+	  <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)..\Omnicasa.Apps.ruleset</CodeAnalysisRuleSet>
+	  <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+</Project>

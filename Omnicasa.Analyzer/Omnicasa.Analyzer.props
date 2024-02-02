@@ -1,5 +1,0 @@
-<Project>
-  <PropertyGroup>
-	  <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)\Omnicasa.Apps.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-</Project>
