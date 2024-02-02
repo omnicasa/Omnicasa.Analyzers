@@ -2,7 +2,7 @@ name: NugetPublish
 on:
   push:
     branches:
-      - master
+      - dev2
 jobs:
   publish:
     name: build, pack & publish
@@ -25,8 +25,12 @@ jobs:
           
       # Publish
       - name: Build nuget pack
+        run: nuget pack
+
+      - name: Tag vesion
         run: |
-          nuget pack
+          git tag v${{env.VERSION}}
+          git push origin v${{env.VERSION}}
 
       - name: Publish
         run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
