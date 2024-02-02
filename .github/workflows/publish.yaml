@@ -2,7 +2,7 @@ name: NugetPublish
 on:
   push:
     branches:
-      - dev2
+      - master
 jobs:
   publish:
     name: build, pack & publish
@@ -13,7 +13,7 @@ jobs:
       - name: Generating project version
         uses: EduardSergeev/project-version-action@v6
         with:
-            version-file: Omnicasa.OscClient/Omnicasa.OscClient.csproj
+            version-file: Omnicasa.Analyzer/Omnicasa.Analyzers.csproj
             version-stub: '65534.65534.65534.65534'
 
       - name: Set version for project
@@ -24,18 +24,13 @@ jobs:
           version: ${{ env.VERSION }}
           
       # Publish
-      - name: Publish on version change
-        id: publish_nuget
-        uses: linch90/publish-nuget@v1.0.2
-        with:
-          # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: Omnicasa.Analyzers.nuspec
+      - name: Build nuget pack
+        run: nuget pack
 
-          # API key to authenticate with NuGet server
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+      - name: Tag vesion
+        run: |
+          git tag v${{env.VERSION}}
+          git push origin v${{env.VERSION}}
 
-          # NuGet server uri hosting the packages, defaults to https://api.nuget.org
-          NUGET_SOURCE: https://api.nuget.org
-
-          # Useful with external providers like Nerdbank.GitVersioning, ignores VERSION_FILE_PATH & VERSION_REGEX
-          VERSION_STATIC: ${{env.VERSION}}
+      - name: Publish
+        run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
