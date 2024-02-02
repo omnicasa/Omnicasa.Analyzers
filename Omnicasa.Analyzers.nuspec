@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Omnicasa.Analyzers</id>
-        <version>1.0.6</version>
+        <version>2024.2.2.1</version>
         <authors>HoangQuach</authors>
         <owners>HoangQuach</owners>
         <license type="expression">MIT</license>
@@ -12,6 +12,7 @@
         <copyright>Copyright ©2023 Omnicasa</copyright>
         <dependencies>
             <dependency id="StyleCop.Analyzers" version="1.1.118" />
+            <dependency id="SonarAnalyzer.CSharp" version="9.17.0.82934" />
         </dependencies>
     </metadata>
 
