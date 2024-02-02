@@ -1,0 +1,17 @@
+name: Dev
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  publish:
+    name: dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build project
+        run: dotnet build -c Release Omnicasa.Analyzer/Omnicasa.Analyzers.csproj
+
+      - name: Build test project
+        run: dotnet build -c Release Omnicasa.Analyzer.Test/Omnicasa.Analyzer.Test.csproj
