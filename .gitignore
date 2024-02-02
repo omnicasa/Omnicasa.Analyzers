@@ -1,0 +1,29 @@
+# KDiff3
+*.orig
+*.bak
+
+# macOS
+*DS_Store
+
+# NuGet
+.nuget/
+packages/
+
+# Nuke
+.nuke/temp/
+
+# Output
+artifacts/
+
+# ReSharper
+_ReSharper.*
+*.ExternalAnnotations.xml
+
+# Visual Studio
+.vs/
+[Oo]bj/
+[Bb]in/
+*.user
+*.suo
+*.userprefs
+*.sln.ide

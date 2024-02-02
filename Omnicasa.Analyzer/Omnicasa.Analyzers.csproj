@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+	<PackageId>Omnicasa.Analyzers</PackageId>
+	<Version>1.0.1</Version>
+	<Authors>HoangQuach</Authors>
+	<Company>Omnicasa</Company>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	<CodeAnalysisRuleSet>Omnicasa.Apps.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<AdditionalFiles Include="stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

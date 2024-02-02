@@ -1,0 +1,11 @@
+<Project>
+	<PropertyGroup>
+		<CodeAnalysisRuleSet>
+			$(MSBuildThisFileDirectory)\Omnicasa.Apps.ruleset
+		</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	<ItemGroup>
+		<AdditionalFiles Include="$(MSBuildThisFileDirectory)\stylecop.json"
+                         Link="stylecop.json" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Omnicasa.Analyzers</id>
+        <version>1.0.2</version>
+        <authors>HoangQuach</authors>
+        <owners>HoangQuach</owners>
+        <license type="expression">MIT</license>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>Bug fixes and performance improvements</releaseNotes>
+        <description>Analyzer</description>
+        <copyright>Copyright ©2023 Omnicasa</copyright>
+        <dependencies>
+            <dependency id="StyleCop.Analyzers" version="1.1.118" />
+        </dependencies>
+    </metadata>
+
+    <files>
+		<file src="stylecop.json" />
+		<file src="Omnicasa.Apps.ruleset" />
+		<file src="Omnicasa.Analyzer.props" target="build" />
+    </files>
+</package>
