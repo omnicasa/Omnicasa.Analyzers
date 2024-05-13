@@ -205,14 +205,14 @@
     <Rule Id="S125" Action="None" />
     <Rule Id="S1075" Action="Warning" />
     <Rule Id="S1104" Action="Warning" />
-    <Rule Id="S1117" Action="None" />
-    <Rule Id="S1121" Action="None" />
+    <Rule Id="S1117" Action="Warning" />
+    <Rule Id="S1121" Action="Warning" />
     <Rule Id="S1123" Action="Warning" />
     <Rule Id="S1125" Action="Warning" />
-    <Rule Id="S1133" Action="None" />
-    <Rule Id="S1135" Action="None" />
-    <Rule Id="S1144" Action="None" />
-    <Rule Id="S1168" Action="None" />
+    <Rule Id="S1133" Action="Warning" />
+    <Rule Id="S1135" Action="Warning" />
+    <Rule Id="S1144" Action="Warning" />
+    <Rule Id="S1168" Action="Warning" />
 
     <Rule Id="S1172" Action="None" />
     <Rule Id="S1185" Action="None" />
