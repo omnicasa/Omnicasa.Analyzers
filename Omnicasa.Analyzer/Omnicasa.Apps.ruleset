@@ -214,12 +214,12 @@
     <Rule Id="S1144" Action="Warning" />
     <Rule Id="S1168" Action="Warning" />
 
-    <Rule Id="S1172" Action="None" />
-    <Rule Id="S1185" Action="None" />
-    <Rule Id="S1186" Action="None" />
-    <Rule Id="S1215" Action="None" />
-    <Rule Id="S1450" Action="None" />
-    <Rule Id="S1481" Action="None" />
+    <Rule Id="S1172" Action="Warning" />
+    <Rule Id="S1185" Action="Warning" />
+    <Rule Id="S1186" Action="Warning" />
+    <Rule Id="S1215" Action="Warning" />
+    <Rule Id="S1450" Action="Warning" />
+    <Rule Id="S1481" Action="Warning" />
     <Rule Id="S1643" Action="None" />
     <Rule Id="S1848" Action="None" />
     <Rule Id="S1854" Action="None" />
