@@ -220,12 +220,14 @@
     <Rule Id="S1215" Action="Warning" />
     <Rule Id="S1450" Action="Warning" />
     <Rule Id="S1481" Action="Warning" />
-    <Rule Id="S1643" Action="None" />
-    <Rule Id="S1848" Action="None" />
-    <Rule Id="S1854" Action="None" />
-    <Rule Id="S1871" Action="None" />
-    <Rule Id="S1905" Action="None" />
-    <Rule Id="S1939" Action="None" />
+
+    <Rule Id="S1643" Action="Warning" />
+    <Rule Id="S1848" Action="Warning" />
+    <Rule Id="S1854" Action="Warning" />
+    <Rule Id="S1871" Action="Warning" />
+    <Rule Id="S1905" Action="Warning" />
+    <Rule Id="S1939" Action="Warning" />
+
     <Rule Id="S2094" Action="None" />
     <Rule Id="S2223" Action="None" />
     <Rule Id="S2259" Action="None" />
