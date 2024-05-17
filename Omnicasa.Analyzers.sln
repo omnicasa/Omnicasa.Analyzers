@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omnicasa.Analyzers", "Omnicasa.Analyzer\Omnicasa.Analyzers.csproj", "{5C06E3DB-1767-4A7F-A46A-B986880607E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omnicasa.Analyzers", "Omnicasa.Analyzer\Omnicasa.Analyzers.csproj", "{5C06E3DB-1767-4A7F-A46A-B986880607E0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{0A8343C4-E270-4EA2-8FD6-D33A93BC0068}"
 EndProject
@@ -11,10 +11,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Omnicasa.Analyzer.Test", "O
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D15BCEFE-A80A-404E-916E-5C1C7995144A}"
 	ProjectSection(SolutionItems) = preProject
-		Omnicasa.Analyzers.nuspec = Omnicasa.Analyzers.nuspec
 		.github\workflows\dev.yaml = .github\workflows\dev.yaml
+		Omnicasa.Analyzers.nuspec = Omnicasa.Analyzers.nuspec
 		.github\workflows\publish.yaml = .github\workflows\publish.yaml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omnicasa.Analyzer.Default", "Omnicasa.Analyzer.Default\Omnicasa.Analyzer.Default\Omnicasa.Analyzer.Default.csproj", "{882E16C6-34B8-4453-AF2E-FE9BB455C557}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omnicasa.Analyzer.Default.CodeFixes", "Omnicasa.Analyzer.Default\Omnicasa.Analyzer.Default.CodeFixes\Omnicasa.Analyzer.Default.CodeFixes.csproj", "{871E63B4-584F-4141-9A83-F3F50877102D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omnicasa.Analyzer.Default.Package", "Omnicasa.Analyzer.Default\Omnicasa.Analyzer.Default.Package\Omnicasa.Analyzer.Default.Package.csproj", "{C185A92E-302E-422E-8175-FD1A69112B6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omnicasa.Analyzer.Default.Test", "Omnicasa.Analyzer.Default\Omnicasa.Analyzer.Default.Test\Omnicasa.Analyzer.Default.Test.csproj", "{ED88561D-1EC1-4601-ACFC-7F9DE8227A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Omnicasa.Analyzer.Default.Vsix", "Omnicasa.Analyzer.Default\Omnicasa.Analyzer.Default.Vsix\Omnicasa.Analyzer.Default.Vsix.csproj", "{C3E21FAF-8C6C-4468-B3FF-2A624855E2E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +40,26 @@ Global
 		{55AEE57E-6B80-4DA3-B6EB-2060986E03B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55AEE57E-6B80-4DA3-B6EB-2060986E03B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55AEE57E-6B80-4DA3-B6EB-2060986E03B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{882E16C6-34B8-4453-AF2E-FE9BB455C557}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882E16C6-34B8-4453-AF2E-FE9BB455C557}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882E16C6-34B8-4453-AF2E-FE9BB455C557}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882E16C6-34B8-4453-AF2E-FE9BB455C557}.Release|Any CPU.Build.0 = Release|Any CPU
+		{871E63B4-584F-4141-9A83-F3F50877102D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871E63B4-584F-4141-9A83-F3F50877102D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871E63B4-584F-4141-9A83-F3F50877102D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871E63B4-584F-4141-9A83-F3F50877102D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C185A92E-302E-422E-8175-FD1A69112B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C185A92E-302E-422E-8175-FD1A69112B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C185A92E-302E-422E-8175-FD1A69112B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C185A92E-302E-422E-8175-FD1A69112B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED88561D-1EC1-4601-ACFC-7F9DE8227A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED88561D-1EC1-4601-ACFC-7F9DE8227A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED88561D-1EC1-4601-ACFC-7F9DE8227A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED88561D-1EC1-4601-ACFC-7F9DE8227A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3E21FAF-8C6C-4468-B3FF-2A624855E2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E21FAF-8C6C-4468-B3FF-2A624855E2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E21FAF-8C6C-4468-B3FF-2A624855E2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E21FAF-8C6C-4468-B3FF-2A624855E2E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
