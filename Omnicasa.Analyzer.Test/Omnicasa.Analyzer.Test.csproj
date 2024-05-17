@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Omnicasa.Analyzer\Omnicasa.Analyzers.csproj" />
+    <ProjectReference Include="..\Omnicasa.Analyzer\Omnicasa.Analyzers.csproj">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+     </ProjectReference>
   </ItemGroup>
 </Project>

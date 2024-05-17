@@ -5,4 +5,4 @@
 
 Rule ID | Category | Severity | Notes
 --------|----------|----------|-------
-MaxLengthLine | Formatting | Warning | MaxLengthLineAnalyzer
+MOBILEOMNI_RULE_0001 | Formatting | Warning | MaxLengthLineAnalyzer

@@ -16,7 +16,7 @@ namespace Omnicasa.Analyzers.Rules
 #pragma warning restore RS1036
     {
         /// <summary>DiagnosticId.</summary>
-        public const string DiagnosticId = "MaxLengthLine";
+        public const string DiagnosticId = "MOBILEOMNI_RULE_0001";
 
         private const string Title = "Line length exceeds maximum limit";
 
