@@ -4,6 +4,8 @@ Code Analyzers for the .NET Compiler for Omnicasa
 
 This repository contains an implementation of the StyleCop & SonarAnalyzer rules using the .NET Compiler Platform. Where possible, code fixes are also provided to simplify the process of correcting violations.
 
+https://omnicasa.atlassian.net/wiki/spaces/servers/pages/4169269258/Use+Omnicasa.Analyzers
+
 ## Installation
 Omnicasa.Analyzers can be installed using the NuGet command line or the NuGet Package Manager in Visual Studio.
 
