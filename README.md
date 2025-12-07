@@ -1,6 +1,8 @@
 Code Analyzers for the .NET Compiler for Omnicasa
 
-[![NuGet Badge](https://buildstats.info/nuget/Omnicasa.Analyzers)](https://www.nuget.org/packages/Omnicasa.Analyzers/)
+[![NuGet Version](https://img.shields.io/nuget/v/Omnicasa.Analyzers.svg)](https://www.nuget.org/packages/Omnicasa.Analyzers/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Omnicasa.Analyzers.svg)](https://www.nuget.org/packages/Omnicasa.Analyzers/)
+
 
 This repository contains an implementation of the StyleCop & SonarAnalyzer rules using the .NET Compiler Platform. Where possible, code fixes are also provided to simplify the process of correcting violations.
 
