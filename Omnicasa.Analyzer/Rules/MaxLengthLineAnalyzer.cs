@@ -11,12 +11,10 @@ namespace Omnicasa.Analyzers.Rules
     /// Omnicasa max length rule.
     /// </summary>
     [DiagnosticAnalyzer(LanguageNames.CSharp)]
-#pragma warning disable RS1036
     public class MaxLengthLineAnalyzer : DiagnosticAnalyzer
-#pragma warning restore RS1036
     {
         /// <summary>DiagnosticId.</summary>
-        public const string DiagnosticId = "MOBILEOMNI_RULE_0001";
+        public const string DiagnosticId = "MOBILE_RULE_0001";
 
         private const string Title = "Line length exceeds maximum limit";
 

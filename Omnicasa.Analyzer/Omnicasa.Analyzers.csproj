@@ -11,7 +11,9 @@
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<CodeAnalysisRuleSet>Omnicasa.Apps.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <PackageProjectUrl>https://github.com/omnicasa/Omnicasa.Analyzers</PackageProjectUrl>
+    <LangVersion>12</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,10 +38,6 @@
     </PackageReference>
     <PackageReference Include="Microsoft.CodeAnalysis" Version="4.9.2" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.9.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Rules\" />
   </ItemGroup>
 
   <ItemGroup>
