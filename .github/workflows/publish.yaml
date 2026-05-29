@@ -16,16 +16,9 @@ jobs:
             version-file: Omnicasa.Analyzer/Omnicasa.Analyzers.csproj
             version-stub: '65534.65534.65534.65534'
 
-      - name: Set version for project
-        id: update
-        uses: vers-one/dotnet-project-version-updater@v1.3
-        with:
-          file: "Omnicasa.Analyzers.nuspec"
-          version: ${{ env.VERSION }}
-          
       # Publish
-      - name: Build nuget pack
-        run: nuget pack
+      - name: Pack
+        run: dotnet pack -c Release Omnicasa.Analyzer/Omnicasa.Analyzers.csproj -p:Version=${{ env.VERSION }} -o ${{ github.workspace }}/artifacts
 
       - name: Tag vesion
         run: |
@@ -33,4 +26,4 @@ jobs:
           git push origin v${{env.VERSION}}
 
       - name: Publish
-        run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
+        run: dotnet nuget push "${{ github.workspace }}/artifacts/*.nupkg" --source 'https://api.nuget.org/v3/index.json' --api-key ${{ secrets.NUGET_API_KEY }} --skip-duplicate

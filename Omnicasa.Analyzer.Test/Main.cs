@@ -18,7 +18,15 @@ namespace Omnicasa.Analyzer.Test
         /// <param name="cd"></param>
         /// <param name="dd"></param>
         /// <param name="id"></param>
-        public void TestingFunction(bool a, string b, float c, double d, decimal i, float cd, double dd, decimal id)
+        public void TestingFunction(
+            bool a,
+            string b,
+            float c,
+            double d,
+            decimal i,
+            float cd,
+            double dd,
+            decimal id)
         {
             System.Diagnostics.Debug.WriteLine("" +
                 "dadhakdhadhajkdhkashdkahdajkdhakhdakhdahdahdkahdkahdjahdakdhasjk");

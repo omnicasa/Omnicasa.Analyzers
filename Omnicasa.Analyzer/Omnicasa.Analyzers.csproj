@@ -1,47 +1,59 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-	<PackageId>Omnicasa.Analyzers</PackageId>
-	<Version>2024.2.2.1</Version>
-	<Authors>HoangQuach</Authors>
-	<Company>Omnicasa</Company>
-	<PackageLicenseExpression>MIT</PackageLicenseExpression>
-	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<CodeAnalysisRuleSet>Omnicasa.Apps.ruleset</CodeAnalysisRuleSet>
+    <PackageId>Omnicasa.Analyzers</PackageId>
+    <Version>2024.2.2.1</Version>
+    <Authors>HoangQuach</Authors>
+    <Company>Omnicasa</Company>
+    <Description>Analyzer</Description>
+    <Copyright>Copyright ©2023 Omnicasa</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <CodeAnalysisRuleSet>Omnicasa.Apps.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
     <PackageProjectUrl>https://github.com/omnicasa/Omnicasa.Analyzers</PackageProjectUrl>
     <LangVersion>12</LangVersion>
+
+    <!-- Analyzer package: ship the analyzer DLL under analyzers/, not as a lib reference. -->
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+    <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);_AddAnalyzerToPackage</TargetsForTfmSpecificContentInPackage>
   </PropertyGroup>
 
   <ItemGroup>
-	<AdditionalFiles Include="stylecop.json" Link="stylecop.json" />
-	<AdditionalFiles Include="AnalyzerReleases.Shipped.md" />
-	<AdditionalFiles Include="AnalyzerReleases.Unshipped.md" />
+    <AdditionalFiles Include="stylecop.json" Link="stylecop.json" />
+    <AdditionalFiles Include="AnalyzerReleases.Shipped.md" />
+    <AdditionalFiles Include="AnalyzerReleases.Unshipped.md" />
   </ItemGroup>
-	
+
+  <!-- Config shipped to consumers: build props auto-imports the shared ruleset. -->
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.25.0.90414">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" />
-    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.9.2" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.9.2" />
+    <None Include="Omnicasa.Analyzers.props" Pack="true" PackagePath="build" />
+    <None Include="Omnicasa.Apps.ruleset" Pack="true" PackagePath="" />
+    <None Include="stylecop.json" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    <!-- Analyzers that flow to consumers as package dependencies, including their
+         analyzer assets so the SA*/S* rules in the ruleset actually run downstream. -->
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" PrivateAssets="none" />
+    <PackageReference Include="SonarAnalyzer.CSharp" Version="9.25.0.90414" PrivateAssets="none" />
+
+    <!-- Roslyn APIs used only to build this analyzer; not exposed to consumers. -->
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.9.2" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis" Version="4.9.2" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.9.2" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
+
+  <Target Name="_AddAnalyzerToPackage">
+    <ItemGroup>
+      <TfmSpecificPackageFile Include="$(OutputPath)$(AssemblyName).dll" PackagePath="analyzers/dotnet/cs" />
+    </ItemGroup>
+  </Target>
 
 </Project>
